@@ -46,13 +46,16 @@ export const cars: Car[] = [
     body: [
       "실제 얀은 2013년 자이텍 Z11SN(LMP2), 2014년 리지에 JS P2(LMP2), 2015년 닛산 GT-R LM 니스모(LMP1)로 르망을 달렸습니다. 영화는 이 셋 대신 JS PX를 썼습니다.",
       "GTPlanet은 JS PX가 영화에서 LMP1 차를 대신하는 역할이라고 설명합니다. 실제 르망 규정과 맞지 않아 레이스 팬에게는 다소 어색한 설정입니다.",
+      "리지에 공식 제원은 3.8리터 V6 트윈터보 825마력, 무게 910kg, 최고 속도 346km/h입니다. LMP2 규정 차인 JS P217의 탄소 모노코크·더블 위시본 서스펜션·휼랜드 6단 시퀀셜 변속기를 쓰지만, 규정에 묶이지 않아 엔진과 전자 장비(ABS·트랙션 컨트롤)가 다릅니다.",
     ],
     uncertain:
-      "자유 이용 사진을 찾지 못해 색 배경으로 둡니다. 출력·무게 같은 제원은 제조사 공식 페이지에서 직접 확인하지 못해 적지 않았습니다.",
+      "JS PX는 한 대만 만든 모델이라 위키미디어 공용에 자유 이용 사진이 없습니다. 사진은 JS PX가 아니라, 섀시·서스펜션·변속기를 그대로 물려준 JS P217(리지에 50주년 도장 전시차)입니다.",
     guide: "maintain",
     featured: true,
     sources: [
       { label: "Ligier Automotive — The Ligier JS PX stars in Gran Turismo film", href: "https://ligierautomotive.com/en/news/the-ligier-js-px-stars-in-gran-turismo-film/" },
+      { label: "Ligier Automotive — Ligier JS PX (제원)", href: "https://ligierautomotive.com/en/vehicles/one-offs/ligier-js-px/" },
+      wiki("Ligier_JS_P217", "Ligier JS P217"),
       GTP,
       IMCDB_GT,
     ],

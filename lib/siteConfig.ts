@@ -47,5 +47,4 @@ export const SOURCE_NOTES = [
   "영화 속 차량은 GTPlanet의 차량 정리 기사, IMCDb, 리지에 오토모티브 발표로 확인했습니다.",
 ];
 export const MISSING_PHOTO_NOTES: Record<string, string> = {
-  "ligier-js-px": "2021년 말 공개된 소량 트랙 전용 차라, 위키미디어 공용에서 자유 이용 사진을 찾지 못했습니다.",
 };
