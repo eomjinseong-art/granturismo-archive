@@ -39,6 +39,18 @@ export const carPhotos: Record<string, LicensedImage> = {
     sourceUrl: "https://commons.wikimedia.org/wiki/File:Nissan_GT-R_Nismo_%2828492%29.jpg",
     sourceLabel: "위키미디어 공용",
   },
+  "ligier-js-px": {
+    src: "/images/cars/ligier-js-px.webp",
+    width: 1200,
+    height: 800,
+    alt: "리지에 JS P217 (JS PX의 바탕 차, 리지에 50주년 도장 전시차) 실제 차량 사진",
+    author: "Alexandre Prevot",
+    license: "CC BY-SA 2.0",
+    licenseUrl: "https://creativecommons.org/licenses/by-sa/2.0",
+    sourceUrl: "https://commons.wikimedia.org/wiki/File:Ligier_JS_P217_%2852575006476%29.jpg",
+    sourceLabel: "위키미디어 공용",
+    referenceNote: "참고: JS PX가 아니라 JS PX의 바탕이 된 JS P217입니다 (JS PX는 공용에 자유 이용 사진이 없음)",
+  },
   "nissan-370z": {
     src: "/images/cars/nissan-370z.webp",
     width: 1200,
