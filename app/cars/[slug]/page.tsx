@@ -12,7 +12,7 @@ import { Sources } from "@/components/Sources";
 import { carPhoto } from "@/data/carPhotos";
 import { carVideos } from "@/data/youtube";
 import { YoutubeLink } from "@/components/YoutubeLink";
-import { FILM_USE_HINT, brandSlug, cars, getCar, kindTone } from "@/lib/cars";
+import { FILM_USE_HINT, brandSlug, cars, getCar, isJapanBrand, kindTone } from "@/lib/cars";
 import { breadcrumbLd, carSeoDescription, carSeoTitle, carThingLd, jsonLd, pageMetadata } from "@/lib/seo";
 import { AUTOPIX_GUIDES, CAR_CTA_LABEL, SITE_URL, autopixGuideUrl } from "@/lib/site";
 import { CAR_CTA_LINE, FILM_SHORT } from "@/lib/siteConfig";
@@ -93,7 +93,7 @@ export default async function CarPage({ params }: { params: Promise<{ slug: stri
         <YoutubeLink video={carVideos[car.slug]} fallbackQuery={`${car.nameEn} review`} />
       </section>
 
-      <NadooAd inline />
+      <NadooAd inline types={isJapanBrand(car.brand) ? "linkprice" : undefined} exclude={isJapanBrand(car.brand) ? undefined : "linkprice"} />
       <section className="mt-8">
         <h2 className="font-serif text-xl text-gold">한눈에</h2>
         <dl className="mt-3 divide-y divide-line rounded-lg border border-line text-sm">

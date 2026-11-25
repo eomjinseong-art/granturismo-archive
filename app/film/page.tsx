@@ -109,7 +109,7 @@ export default function FilmPage() {
 
       <CoupangCard />
 
-      <NadooAd inline />
+      <NadooAd inline exclude="linkprice" />
       <section className="mt-8">
         <h2 className="font-serif text-xl text-gold">제작과 촬영</h2>
         <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-paper">

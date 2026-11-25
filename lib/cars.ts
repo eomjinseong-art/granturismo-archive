@@ -60,3 +60,22 @@ export function brandGroups() {
   }
   return [...map.values()].sort((a, b) => b.items.length - a.items.length || a.brand.localeCompare(b.brand));
 }
+
+const JAPAN_BRANDS = new Set([
+  "Nissan",
+  "Honda",
+  "Toyota",
+  "Lexus",
+  "Mazda",
+  "Subaru",
+  "Mitsubishi",
+  "Suzuki",
+  "Infiniti",
+  "Acura",
+  "Datsun",
+  "Yamaha",
+]);
+
+export function isJapanBrand(brand: string) {
+  return JAPAN_BRANDS.has(brand);
+}

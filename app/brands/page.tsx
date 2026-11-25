@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
 import { sisterCarsForBrands } from "@/data/sisterCars";
-import { brandGroups, brandSlug } from "@/lib/cars";
+import { brandGroups, brandSlug, isJapanBrand } from "@/lib/cars";
 import { itemListLd, jsonLd, pageMetadata } from "@/lib/seo";
 import { FILM_SHORT } from "@/lib/siteConfig";
 
@@ -15,6 +15,7 @@ export const metadata: Metadata = pageMetadata({
 
 export default function BrandsPage() {
   const brands = brandGroups();
+  const firstJapan = brands.find((b) => isJapanBrand(b.brand))?.brand;
   return (
     <div className="mx-auto max-w-5xl px-4 py-10">
       <JsonLd
@@ -30,7 +31,7 @@ export default function BrandsPage() {
       <p className="mt-2 max-w-2xl text-sm leading-6 text-muted">
         {brands.length}개 브랜드. 차량이 많은 브랜드부터 적었습니다. 다른 영화 아카이브에 같은 브랜드 차가 있으면 함께 잇습니다.
       </p>
-      <NadooAd inline />
+      <NadooAd inline exclude="linkprice" />
       <div className="mt-8 space-y-6">
         {brands.map((entry) => {
           const sisters = sisterCarsForBrands([entry.brand]);
@@ -62,6 +63,7 @@ export default function BrandsPage() {
                   ))}
                 </p>
               ) : null}
+              {entry.brand === firstJapan ? <NadooAd inline types="linkprice" /> : null}
             </section>
           );
         })}
